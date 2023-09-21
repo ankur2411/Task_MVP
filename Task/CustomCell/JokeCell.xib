@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="JokeCell" customModule="Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svs-Mq-kPj">
+                        <rect key="frame" x="4" y="4" width="367" height="82"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jokes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-wg-YWi">
+                                <rect key="frame" x="5" y="5" width="357" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-pr-Rpy">
+                                <rect key="frame" x="5" y="56" width="357" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cYh-6g-PL7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="DVL-wg-YWi" firstAttribute="top" secondItem="svs-Mq-kPj" secondAttribute="top" constant="5" id="0Yv-ji-j0e"/>
+                            <constraint firstAttribute="trailing" secondItem="g7W-pr-Rpy" secondAttribute="trailing" constant="5" id="YPo-eQ-PEt"/>
+                            <constraint firstAttribute="trailing" secondItem="DVL-wg-YWi" secondAttribute="trailing" constant="5" id="Ync-ru-18L"/>
+                            <constraint firstItem="g7W-pr-Rpy" firstAttribute="leading" secondItem="svs-Mq-kPj" secondAttribute="leading" constant="5" id="kek-o1-Et2"/>
+                            <constraint firstItem="DVL-wg-YWi" firstAttribute="leading" secondItem="svs-Mq-kPj" secondAttribute="leading" constant="5" id="rQY-tj-1CP"/>
+                            <constraint firstItem="g7W-pr-Rpy" firstAttribute="top" secondItem="DVL-wg-YWi" secondAttribute="bottom" id="sXq-bh-Ved"/>
+                            <constraint firstAttribute="bottom" secondItem="g7W-pr-Rpy" secondAttribute="bottom" constant="5" id="uB7-Ua-XCN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="svs-Mq-kPj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="YqT-mc-gL7"/>
+                    <constraint firstItem="svs-Mq-kPj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="sJy-fv-sY3"/>
+                    <constraint firstAttribute="bottom" secondItem="svs-Mq-kPj" secondAttribute="bottom" constant="4" id="wom-rF-tum"/>
+                    <constraint firstAttribute="trailing" secondItem="svs-Mq-kPj" secondAttribute="trailing" constant="4" id="xcQ-Wl-KJv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lbl_dateTime" destination="g7W-pr-Rpy" id="ukM-Dq-PBt"/>
+                <outlet property="lbl_joke" destination="DVL-wg-YWi" id="CNf-o7-nOO"/>
+            </connections>
+            <point key="canvasLocation" x="-216" y="13"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
